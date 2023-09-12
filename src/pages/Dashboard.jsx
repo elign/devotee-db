@@ -19,7 +19,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <p className="logout" onClick={logout}>Hi {name} wanna Logout?</p>
+      <p className="logout" onClick={logout}><span class="underline-on-hover">Hi {name} wanna Logout?</span></p>
       <ContactForm />
     </div>
   )

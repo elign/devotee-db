@@ -1,5 +1,8 @@
 body {
-    background-color: #FFDBAA;
+    background-image: linear-gradient(to right bottom, #99f2b4, #bfe190, #dece7c, #f5b97c, #ffa68a, #fd9c91, #f9939a, #f18ca3, #eb869e, #e57f99, #e07994, #da738f);
+    margin: 0px;
+    height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .index-page {
@@ -8,20 +11,39 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-.button {
-    height: 50px;
+.buttone{
+    height: 25px;
     padding: 10px 10px;
-    font-size: 18px;
+    font-size: 13px;
     background: none;
-    border: 2px solid black;
+    border: 1px solid black;
+    background-image: linear-gradient(to right, #fdf67e, #f8fa9b, #f5fdb7, #f5fed1, #f8ffe9);
     cursor: pointer;
-    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     border-radius: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.button {
+    height: 40px;
+    width: 87px;
+    padding: 10px 10px;
+    font-size: 17px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    box-shadow: rgba(7, 204, 171, 0.5) 0px 5px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    left: 100px;
+    background-image: linear-gradient(to left top, #10afc4, #76c0df, #b2d2ee, #e0e6f7, #ffffff);
 }
 
 .button-pair {
@@ -31,28 +53,34 @@ body {
 }
 
 .form {
-    border: 2px solid black;
-    padding: 30px 30px;
-    margin-top: 20px;
+    border: none;
+    padding: 20px 20px;
+    margin-top: 5px;
     display: flex;
-    gap: 15px;
+    gap: 4.7px;
     flex-direction: column;
     width: 300px;
     border-radius: 10px;
-    background-color: #FFF3DA;
+    background-image: linear-gradient(to right bottom, #fffe92, #f5ff9b, #ebffa4, #e3ffad, #dcfeb6, #d9feba, #d6febe, #d3fec2, #d1fec3, #cfffc4, #ceffc6, #ccffc7);
 }
+
 
 .dashboard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 97vh;
+    margin: 0px;
 }
 
 .logout {
     cursor: pointer;
-    border-bottom: 2px solid black;
+    font-size: 16px;
+    font-weight: 600;
+}
+.underline-on-hover:hover {
+    text-decoration: underline;
 }
 
 label {
@@ -60,9 +88,9 @@ label {
 }
 
 input[type="text"], input[type="tel"], select{
-    height: 50px;
+    height: 33px;
     width: 92%;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     outline: none;
     border: 2px solid black;
@@ -70,15 +98,13 @@ input[type="text"], input[type="tel"], select{
     padding: 0px 10px;
     background-color: transparent;
 }
-
 .number-field {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
 }
-
 select {
-    margin-bottom: 30px;
+    margin-bottom: 6px;
     width: 100%;
 }
 
@@ -88,8 +114,155 @@ table {
 }
 
 td {
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 10px 20px;
     background-color: #FFF3DA;
 
+}
+.up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+
+}
+input[type="text"], input[type="email"], input[type="password"], select{
+    height: 40px;
+    width: 92%;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+.buttonup{
+   margin-left: 104px;
+   margin-top: 20px;
+   color: black;
+   font-size: 18px;
+   font-weight: 700;
+   height: 34px;
+   width: 100px;
+}
+.in{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 80px;
+}
+.signin{
+    font-style:italic ;
+    font-size: 29px;
+}
+input[type="text"], input[type="email"], input[type="password"], select{
+    height: 40px;
+    width: 92%;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+.buttonin{
+    margin-left: 30%;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    background-image: linear-gradient(to left top, #10afc4, #76c0df, #b2d2ee, #e0e6f7, #ffffff);
+    font-size: 19px;
+    font-weight: 700;
+    height: 45px;
+    width: 110px;
+    box-shadow: rgba(7, 204, 171, 0.5) 0px 5px 15px;
+}
+.google{
+    display: flex;
+    cursor: pointer;
+    margin-top: 204px;
+    margin-left: 67%;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    height: 50px;
+    width: 28%;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding-left: 40px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.google > svg{
+    height: 24px;
+}
+.inform{
+    border: none;
+    padding: 30px 30px;
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right bottom, #fffe92, #f5ff9b, #ebffa4, #e3ffad, #dcfeb6, #d9feba, #d6febe, #d3fec2, #d1fec3, #cfffc4, #ceffc6, #ccffc7);
+}
+.signup{
+    font-style:italic ;
+    font-size: 29px;
+}
+.up{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.upform{
+    border: none;
+    padding: 20px 27px;
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right bottom, #fffe92, #f5ff9b, #ebffa4, #e3ffad, #dcfeb6, #d9feba, #d6febe, #d3fec2, #d1fec3, #cfffc4, #ceffc6, #ccffc7);
+}
+.buttonup{
+    margin-left: 30%;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    background-image: linear-gradient(to left top, #10afc4, #76c0df, #b2d2ee, #e0e6f7, #ffffff);
+    font-size: 19px;
+    font-weight: 700;
+    height: 45px;
+    width: 110px;
+    box-shadow: rgba(7, 204, 171, 0.5) 0px 5px 15px;
+}
+.dashboardd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 60px;
+}
+.call{
+    font-weight: 600;
+    height: 29px;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(196, 196, 196);
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }

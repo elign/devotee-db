@@ -31,7 +31,7 @@ function Contacts() {
     }, [])
 
     return (
-        <div className="dashboard">
+        <div className="dashboardd">
             <table>
                 <tr>
                     <th>Sr.No.</th>
@@ -46,7 +46,7 @@ function Contacts() {
                                 <td>{idx + 1}</td>
                                 <td>{val.name}</td>
                                 <td>{val.location}</td>
-                                <td><a style={{textDecoration: "none"}} href={`tel:${val.phoneNumber}`}><button className="button">Call Now</button></a></td>
+                                <td><a style={{textDecoration: "none"}} href={`tel:${val.phoneNumber}`}><button className="call">Call Now</button></a></td>
                             </tr>
                         )
                     })
