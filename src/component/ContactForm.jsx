@@ -34,15 +34,60 @@ const options = [
     },
 ]
 
+const optionss = [
+    {
+        value: '',
+        label: '-- Select Profession--',
+    },
+    {
+        value: 'Working Professional',
+        label: 'Working Professional',
+    },
+    {
+        value: 'College Student',
+        label: 'College Student',
+    },
+    {
+        value: 'Dropper or School Student',
+        label: 'Dropper or School Student',
+    },
+]
+
+const optionsss = [
+    {
+        value: '',
+        label: '-- Select Option--',
+    },
+    {
+        value: 'Every Sunday & All the Programs',
+        label: 'Every Sunday & All the Programs',
+    },
+    {
+        value: 'Only about Functions',
+        label: 'Only about Functions',
+    },
+]
+
 function ContactForm() {
 
     const [name, setName] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [location, setLocation] = useState("");
+    const [prof , setProf] = useState("");
+    const [chanting, setChanting] = useState("");
+    const [rem,setRem] = useState("");
     const [numberExists, setNumberExists] = useState(false);
     const [isAlertVisible, setIsAlertVisible] = useState(false);
 
     const selectOptions = options.map(({ value, label }, idx) => (
+        <option key={idx} value={value}> {label}</option>
+    ))
+    
+    const selectOptionss = optionss.map(({ value, label }, idx) => (
+        <option key={idx} value={value}> {label}</option>
+    ))
+
+    const selectOptionsss = optionsss.map(({ value, label }, idx) => (
         <option key={idx} value={value}> {label}</option>
     ))
 
@@ -54,6 +99,9 @@ function ContactForm() {
                 name: name,
                 phoneNumber: phoneNumber,
                 location: location,
+                prof: prof,
+                chanting: chanting,
+                rem: rem,
             }
             await setDoc(docRef, data);
 
@@ -64,6 +112,9 @@ function ContactForm() {
         setName("");
         setPhoneNumber("");
         setLocation("");
+        setProf("");
+        setChanting("");
+        setRem("");
     }
 
     const doesNumberExist = async (e) => {
@@ -97,7 +148,7 @@ function ContactForm() {
                 }
                 <div>
                     <label htmlFor='Name'>Number: </label><br />
-                    <div className="number-field">
+                    <div className="tel">
                         <input
                             type='tel'
                             id='phoneNumber'
@@ -107,13 +158,14 @@ function ContactForm() {
                             required
                             onChange={(e) => setPhoneNumber(e.target.value)}
                         />
-                        <button onClick={doesNumberExist} className="button">Exists?</button>
+                        <button onClick={doesNumberExist} className="buttone">Exists?</button>
                     </div>
                 </div>
             </form>
             <form onSubmit={submit} className="form">
 
                 <div><label htmlFor='Name'>Name: </label><br />
+               
                     <input
                         type='text'
                         id='firstName'
@@ -123,14 +175,42 @@ function ContactForm() {
                         required
                         onChange={(e) => setName(e.target.value)}
                     />
+                 
                 </div>
                 <div>
                     <label htmlFor='Location'>Location</label> <br />
                     <select name='location' required value={location} onChange={(e) => setLocation(e.target.value)} id='location'>
                         {selectOptions}
                     </select>
-
                 </div>
+
+                <div>
+                    <label htmlFor='Prof'>Profession</label> <br />
+                    <select name='prof' required value={prof} onChange={(e) => setProf(e.target.value)} id='prof'>
+                        {selectOptionss}
+                    </select>
+                </div>
+                
+                <div>
+                    <label htmlFor='Chanting'>Chanting Rounds: </label><br />
+                    <input
+                        type='text'
+                        id='Chanting'
+                        name='Chanting'
+                        placeholder='Enter rounds of chanting..'
+                        value={chanting}
+                        required
+                        onChange={(e) => setChanting(e.target.value)}
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor='rem'>Would you like to be reminded about functions at Iskcon Temple?</label> <br />
+                    <select name='rem' required value={rem} onChange={(e) => setRem(e.target.value)} id='rem'>
+                        {selectOptionsss}
+                    </select>
+                </div>
+
                 <input type="submit" className="button" />
             </form>
 
